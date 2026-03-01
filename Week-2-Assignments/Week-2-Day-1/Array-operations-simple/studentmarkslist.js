@@ -1,0 +1,11 @@
+const marks = [78, 92, 35, 88, 40, 67];
+const passmarks=marks.filter(p=>p>=40)
+console.log("Pass marks are:",passmarks)
+const add5=marks.map(f=>f+5)
+console.log("After adding 5 grace marks to each:",add5)
+let high=marks.reduce((acc,curr)=>{return curr>acc?curr:acc},marks[0])
+console.log("Highest mark:",high)
+let below40=marks.find(f=>f<40)
+console.log("Below 40 marks is:",below40)
+let index92=marks.findIndex(i=>i==92)
+console.log("Index of mark 92:",index92)

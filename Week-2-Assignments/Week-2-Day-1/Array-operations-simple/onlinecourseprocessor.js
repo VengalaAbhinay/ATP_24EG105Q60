@@ -1,0 +1,13 @@
+const courses = ["javascript", "react", "node", "mongodb", "express"];
+console.log(courses)
+const name5=courses.filter(n=>n.length>5)
+console.log(name5)
+const ltou=courses.map(u=>u.toUpperCase())
+console.log(ltou)
+const single=courses.reduce((acc,curr)=>acc+" | "+curr)
+console.log(single)
+let a=courses.find(f=>f=="react")
+if(a)
+    console.log(a)
+let b=courses.findIndex(b=>b=="node")
+console.log(b)
