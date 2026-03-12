@@ -1,0 +1,40 @@
+### Get all products
+GET http://localhost:4000/product-api/products
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm9kdWN0aWQiOjEwMSwiaWF0IjoxNzczMzI3NTAwLCJleHAiOjE3NzMzMzExMDB9.7TehDjtnkJDKDINR2K2EpFpxRsUrH0whnAAQ5dZiB1s; Path=/; HttpOnly; SameSite=Lax
+###
+GET  http://localhost:4000/product-api/products/101
+Cookie: 
+###
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "productid":"101",
+    "productName":"TV",
+    "productPrice":40000,
+    "productBrand":"LG"
+}
+### login
+
+POST http://localhost:4000/product-api/auth
+Content-Type: application/json
+
+{
+    "productid":"101",
+    "productName":"Fridge"
+}
+
+###
+PUT  http://localhost:4000/product-api/products/101
+Content-Type: application/json
+
+{
+    "productid":101,
+    "productName":"Fridge",
+    "productPrice":42000,
+    "productBrand":"Samsung"
+}
+
+###
+DELETE http://localhost:4000/product-api/products/101
+Cookie:
