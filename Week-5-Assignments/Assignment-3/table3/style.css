@@ -1,0 +1,21 @@
+table{
+    margin: auto;
+    width: 800px;
+    margin-top: 200px;
+    text-align: center;
+}
+table,th,td{
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+img{
+        border-radius: 50%;
+        width: 50px;
+}
+th{
+    background-color: aqua;
+    padding: 10px;
+}
+.t1{
+    background-color: rgb(197, 239, 239);
+}
