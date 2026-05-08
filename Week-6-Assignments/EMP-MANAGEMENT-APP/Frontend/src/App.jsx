@@ -22,7 +22,8 @@ function App() {
                 path:"list",element:<ListOfEmps/>
             },
             {path:"employee",element:<Employee/>},
-            {path:"edit-emp",element:<EditEmp/>}
+            {path:"edit-emp",element:<EditEmp/>},
+            {path:"delete-emp",element:<DeleteEmp/>}
         ]
     }])
   return (

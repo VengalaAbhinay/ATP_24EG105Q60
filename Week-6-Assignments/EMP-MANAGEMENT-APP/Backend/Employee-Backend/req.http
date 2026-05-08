@@ -3,27 +3,27 @@ POST http://localhost:5000/employee-api/employee
 Content-Type: application/json
 
 {
-    "name":"Harish",
-    "email":"harish@gmail.com",
-    "mobile":"8888888",
+    "name":"Ravi",
+    "email":"ravi@gmail.com",
+    "mobile":"9274464567",
     "designation":"developer",
-    "companyName":"TCS"
+    "companyName":"JPMc"
 }
 
 ###Read all employees
 GET http://localhost:5000/employee-api/employee
 
 ###edit employee
-PUT http://localhost:5000/employee-api/employee/69caa833c313c15eadc49d51
+PUT http://localhost:5000/employee-api/employee/69fac23809ec10f4a19a1763
 Content-Type: application/json
 
 {
-   "name":"Harish",
-    "email":"harishraj@mail.com",
+   "name":"Abhinay",
+    "email":"aaaa@mail.com",
     "mobile":9999999,
     "designation":"developer",
     "companyName":"cts"
 }
 
 ###delete employee
-DELETE http://localhost:5000/employee-api/employee/69caa833c313c15eadc49d51
+DELETE http://localhost:5000/employee-api/employee/69fac8af349b5b818967a270
