@@ -11,7 +11,7 @@ export const useAuth = create((set) => ({
   login: async (userCred) => {
     try {
       set({ loading: true, currentUser: null, isAuthenticated: false, error: null });
-      const res = await axios.post("${API}/auth/login", userCred, { withCredentials: true });
+      const res = await axios.post(`${API}/auth/login`, userCred, { withCredentials: true });
       if (res.status === 200) {
         set({ currentUser: res.data.payload, loading: false, isAuthenticated: true, error: null });
       }
@@ -27,7 +27,7 @@ export const useAuth = create((set) => ({
 
   logout: async () => {
     try {
-      await axios.get("${API}/auth/logout", { withCredentials: true });
+      await axios.get(`${API}/auth/logout`, { withCredentials: true });
     } catch (_) {}
     set({ currentUser: null, loading: false, isAuthenticated: false, error: null });
   },
