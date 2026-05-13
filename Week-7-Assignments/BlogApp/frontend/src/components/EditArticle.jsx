@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router";
 import { useEffect } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
+const API = import.meta.env.VITE_API_URL;
 
 const CATEGORIES = ["Technology", "Programming", "AI", "Web Development", "Science", "Business", "Design"];
 
@@ -22,7 +23,7 @@ function EditArticle() {
   const updateArticle = async (modifiedArticle) => {
     try {
       const res = await axios.put(
-        "http://localhost:4000/author-api/article",
+        "${API}/author-api/article",
         { ...modifiedArticle, articleId: article?._id },
         { withCredentials: true }
       );

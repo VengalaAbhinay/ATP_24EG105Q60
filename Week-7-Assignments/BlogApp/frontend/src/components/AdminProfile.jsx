@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useAuth } from "../store/authStore";
 import toast from "react-hot-toast";
+const API = import.meta.env.VITE_API_URL;
 
 function AdminProfile() {
   const currentUser = useAuth((state) => state.currentUser);
@@ -19,7 +20,7 @@ function AdminProfile() {
   const fetchUsers = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("http://localhost:4000/admin-api/users", { withCredentials: true });
+      const res = await axios.get("${API}/admin-api/users", { withCredentials: true });
       setUsers(res.data.payload);
     } catch (err) {
       toast.error("Failed to load users");
@@ -30,7 +31,7 @@ function AdminProfile() {
 
   const fetchArticles = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/admin-api/articles", { withCredentials: true });
+      const res = await axios.get("${API}/admin-api/articles", { withCredentials: true });
       setArticles(res.data.payload);
     } catch (err) {
       toast.error("Failed to load articles");
@@ -39,7 +40,7 @@ function AdminProfile() {
 
   const toggleUserBlock = async (userId) => {
     try {
-      const res = await axios.patch(`http://localhost:4000/admin-api/user/${userId}/block`, {}, { withCredentials: true });
+      const res = await axios.patch(`${API}/admin-api/user/${userId}/block`, {}, { withCredentials: true });
       setUsers((prev) => prev.map((u) => (u._id === userId ? { ...u, isUserActive: !u.isUserActive } : u)));
       toast.success(res.data.message);
     } catch (err) {
@@ -49,7 +50,7 @@ function AdminProfile() {
 
   const toggleArticleBlock = async (articleId) => {
     try {
-      const res = await axios.patch(`http://localhost:4000/admin-api/article/${articleId}/block`, {}, { withCredentials: true });
+      const res = await axios.patch(`${API}/admin-api/article/${articleId}/block`, {}, { withCredentials: true });
       setArticles((prev) => prev.map((a) => (a._id === articleId ? { ...a, isArticleActive: !a.isArticleActive } : a)));
       toast.success(res.data.message);
     } catch (err) {
@@ -60,7 +61,7 @@ function AdminProfile() {
   const deleteUser = async (userId) => {
     if (!window.confirm("Permanently delete this user?")) return;
     try {
-      await axios.delete(`http://localhost:4000/admin-api/user/${userId}`, { withCredentials: true });
+      await axios.delete(`${API}/admin-api/user/${userId}`, { withCredentials: true });
       setUsers((prev) => prev.filter((u) => u._id !== userId));
       toast.success("User deleted");
     } catch (err) {

@@ -13,7 +13,11 @@ config();
 
 const app = exp();
 
-app.use(cors({ origin: "https://blog-app-frontend-dun-seven.vercel.app/", credentials: true }));
+app.use(cors({
+  origin: "https://blog-app-frontend-dun-seven.vercel.app",  
+  credentials: true
+}));
+
 app.use(cookieParser());
 app.use(exp.json());
 

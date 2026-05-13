@@ -24,7 +24,7 @@ export const verifyToken = (...allowedRoles) => {
       if (decodedToken.role !== "ADMIN") {
         const user = await UserModel.findById(decodedToken.id);
         if (!user || !user.isUserActive) {
-          res.clearCookie("token", { httpOnly: true, secure: false, sameSite: "lax" });
+          res.clearCookie("token", { httpOnly: true, secure: true, sameSite: "none" });
           return res.status(403).json({ message: "Your account has been blocked by admin" });
         }
       }

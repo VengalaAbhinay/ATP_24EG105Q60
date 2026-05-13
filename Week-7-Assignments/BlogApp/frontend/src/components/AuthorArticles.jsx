@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import { useAuth } from "../store/authStore";
+const API = import.meta.env.VITE_API_URL;
 
 function AuthorArticles() {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ function AuthorArticles() {
     const fetch = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("http://localhost:4000/author-api/article", { withCredentials: true });
+        const res = await axios.get("${API}/author-api/article", { withCredentials: true });
         if (res.status === 200) setArticles(res.data.payload);
       } catch (err) {
         setError(err.response?.data?.message || "Failed to fetch articles");

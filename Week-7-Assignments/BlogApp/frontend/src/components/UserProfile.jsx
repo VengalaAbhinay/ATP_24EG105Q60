@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+const API = import.meta.env.VITE_API_URL;
 
 function UserProfile() {
   const currentUser = useAuth((state) => state.currentUser);
@@ -16,7 +17,7 @@ function UserProfile() {
     const getArticles = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("http://localhost:4000/user-api/articles", { withCredentials: true });
+        const res = await axios.get("${API}/user-api/articles", { withCredentials: true });
         if (res.status === 200) setArticles(res.data.payload);
       } catch (err) {
         if (err.response?.status === 403) {
@@ -35,7 +36,7 @@ function UserProfile() {
 
   const handleLike = async (articleId) => {
     try {
-      const res = await axios.patch("http://localhost:4000/user-api/articles/like", { articleId }, { withCredentials: true });
+      const res = await axios.patch("${API}/user-api/articles/like", { articleId }, { withCredentials: true });
       setArticles((prev) => prev.map((a) => (a._id === articleId ? res.data.payload : a)));
     } catch (err) {
       toast.error("Failed to like article");

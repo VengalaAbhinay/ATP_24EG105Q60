@@ -4,6 +4,7 @@ import axios from "axios";
 import { useAuth } from "../store/authStore";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+const API = import.meta.env.VITE_API_URL;
 
 function ArticleByID() {
   const { id } = useParams();
@@ -22,7 +23,7 @@ function ArticleByID() {
     const fetch = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(`http://localhost:4000/user-api/articles/${id}`, { withCredentials: true });
+        const res = await axios.get(`${API}/user-api/articles/${id}`, { withCredentials: true });
         setArticle(res.data.payload);
       } catch (err) {
         setError(err.response?.data?.message || "Failed to load article");
@@ -41,7 +42,7 @@ function ArticleByID() {
     if (!window.confirm(newStatus ? "Restore this article?" : "Remove this article?")) return;
     try {
       const res = await axios.patch(
-        "http://localhost:4000/author-api/article",
+        "${API}/author-api/article",
         { articleId: article._id, isArticleActive: newStatus },
         { withCredentials: true }
       );
@@ -60,7 +61,7 @@ function ArticleByID() {
   const handleLike = async () => {
     try {
       const res = await axios.patch(
-        "http://localhost:4000/user-api/articles/like",
+        "${API}/user-api/articles/like",
         { articleId: article._id },
         { withCredentials: true }
       );
@@ -74,7 +75,7 @@ function ArticleByID() {
     setCommentLoading(true);
     try {
       const res = await axios.put(
-        "http://localhost:4000/user-api/articles",
+        "${API}/user-api/articles",
         { articleId: article._id, comment: commentObj.comment },
         { withCredentials: true }
       );

@@ -4,6 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router";
 import { useAuth } from "../store/authStore";
 import toast from "react-hot-toast";
+const API = import.meta.env.VITE_API_URL;
 
 const CATEGORIES = ["Technology", "Programming", "AI", "Web Development", "Science", "Business", "Design"];
 
@@ -17,7 +18,7 @@ function WriteArticles() {
     setLoading(true);
     articleObj.author = currentUser._id;
     try {
-      const res = await axios.post("http://localhost:4000/author-api/article", articleObj, { withCredentials: true });
+      const res = await axios.post("${API}/author-api/article", articleObj, { withCredentials: true });
       if (res.status === 201) {
         toast.success("Article published!");
         reset();

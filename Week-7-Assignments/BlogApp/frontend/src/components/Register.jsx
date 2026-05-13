@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from "react-router";
 import { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
+const API = import.meta.env.VITE_API_URL;
 
 function Register() {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -25,7 +26,7 @@ function Register() {
     try {
       setLoading(true);
       setApiError(null);
-      const res = await axios.post("http://localhost:4000/auth/users", formData, { withCredentials: true });
+      const res = await axios.post("${API}/auth/users", formData, { withCredentials: true });
       if (res.status === 201) {
         toast.success("Account created! Please sign in.");
         navigate("/login");
