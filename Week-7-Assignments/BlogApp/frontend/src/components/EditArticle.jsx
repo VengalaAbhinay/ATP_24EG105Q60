@@ -23,7 +23,7 @@ function EditArticle() {
   const updateArticle = async (modifiedArticle) => {
     try {
       const res = await axios.put(
-        "${API}/author-api/article",
+        `${API}/author-api/article`,
         { ...modifiedArticle, articleId: article?._id },
         { withCredentials: true }
       );

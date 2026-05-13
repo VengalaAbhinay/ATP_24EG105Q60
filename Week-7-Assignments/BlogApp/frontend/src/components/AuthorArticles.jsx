@@ -16,7 +16,7 @@ function AuthorArticles() {
     const fetch = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("${API}/author-api/article", { withCredentials: true });
+        const res = await axios.get(`${API}/author-api/article`, { withCredentials: true });
         if (res.status === 200) setArticles(res.data.payload);
       } catch (err) {
         setError(err.response?.data?.message || "Failed to fetch articles");

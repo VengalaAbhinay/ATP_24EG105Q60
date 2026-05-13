@@ -26,7 +26,7 @@ function Register() {
     try {
       setLoading(true);
       setApiError(null);
-      const res = await axios.post("${API}/auth/users", formData, { withCredentials: true });
+      const res = await axios.post(`${API}/auth/users`, formData, { withCredentials: true });
       if (res.status === 201) {
         toast.success("Account created! Please sign in.");
         navigate("/login");

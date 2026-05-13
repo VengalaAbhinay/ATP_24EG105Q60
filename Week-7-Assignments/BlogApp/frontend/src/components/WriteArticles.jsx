@@ -18,7 +18,7 @@ function WriteArticles() {
     setLoading(true);
     articleObj.author = currentUser._id;
     try {
-      const res = await axios.post("${API}/author-api/article", articleObj, { withCredentials: true });
+      const res = await axios.post(`${API}/author-api/article`, articleObj, { withCredentials: true });
       if (res.status === 201) {
         toast.success("Article published!");
         reset();

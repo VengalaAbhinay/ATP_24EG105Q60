@@ -42,7 +42,7 @@ function ArticleByID() {
     if (!window.confirm(newStatus ? "Restore this article?" : "Remove this article?")) return;
     try {
       const res = await axios.patch(
-        "${API}/author-api/article",
+        `${API}/author-api/article`,
         { articleId: article._id, isArticleActive: newStatus },
         { withCredentials: true }
       );
@@ -61,7 +61,7 @@ function ArticleByID() {
   const handleLike = async () => {
     try {
       const res = await axios.patch(
-        "${API}/user-api/articles/like",
+        `${API}/user-api/articles/like`,
         { articleId: article._id },
         { withCredentials: true }
       );
@@ -75,7 +75,7 @@ function ArticleByID() {
     setCommentLoading(true);
     try {
       const res = await axios.put(
-        "${API}/user-api/articles",
+        `${API}/user-api/articles`,
         { articleId: article._id, comment: commentObj.comment },
         { withCredentials: true }
       );

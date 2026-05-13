@@ -20,7 +20,7 @@ function AdminProfile() {
   const fetchUsers = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("${API}/admin-api/users", { withCredentials: true });
+      const res = await axios.get(`${API}/admin-api/users`, { withCredentials: true });
       setUsers(res.data.payload);
     } catch (err) {
       toast.error("Failed to load users");
@@ -31,7 +31,7 @@ function AdminProfile() {
 
   const fetchArticles = async () => {
     try {
-      const res = await axios.get("${API}/admin-api/articles", { withCredentials: true });
+      const res = await axios.get(`${API}/admin-api/articles`, { withCredentials: true });
       setArticles(res.data.payload);
     } catch (err) {
       toast.error("Failed to load articles");
