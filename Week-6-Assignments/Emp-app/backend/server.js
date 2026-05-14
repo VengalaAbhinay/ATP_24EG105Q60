@@ -9,7 +9,7 @@ config();
 const app = exp();
 //add cors middleware// cors means applications running on diff domain 
 app.use(cors({//used to accept request from this request
-  origin: true,
+  origin: "https://mernapp-frontend-tau.vercel.app",
   credentials: true,
 }))
 
