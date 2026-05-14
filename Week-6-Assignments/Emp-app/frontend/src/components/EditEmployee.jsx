@@ -15,7 +15,7 @@ function EditEmployee() {
     console.log(modifiedEmp);
     // Add your API call or form submission logic here
     //make http put req
-    const res=await axios.put(`http://localhost:4000/emp-api/employees/${state._id}`,modifiedEmp);
+    const res=await axios.put(`${import.meta.env.VITE_API_URL}/emp-api/employees/${state._id}`,modifiedEmp);
     if(res.status===200){
       //navigate to list of emps
       navigate("/list");
