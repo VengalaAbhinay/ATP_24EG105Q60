@@ -5,7 +5,7 @@ function RootLayout() {
   return (
     <div>
       <Header />
-      <div className='min-h-screen mx-20 p-20 bg-blue-400'>
+      <div className='min-h-screen mx-20 p-20 '>
         <Outlet />
       </div>
     </div>
