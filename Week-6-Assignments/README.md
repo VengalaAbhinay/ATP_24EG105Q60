@@ -1,47 +1,84 @@
-# Week 6 - React.js Mastery
+# Week 6 Assignments
 
-## 📋 Overview
-Advanced React concepts including **Context API**, **Zustand**, **React Router**, and full-stack integration.
+This repository contains multiple projects and practice assignments completed during Week 6 of learning full-stack development. It includes React applications and a basic employee management backend.
 
-## 🗂️ Projects
+---
 
-### **1. Context & Zustand Demo**
-- `contextprovider/` - Comparison between Context API and Zustand
-- Demonstrates state management best practices
+## 📁 Folder Structure
+Week-6-Assignments/
+│
+├── addingusers/ # React app for adding and managing users
+├── Emp-app/ # Employee management backend (Node.js + Express)
+├── React-assignment1/ # React assignment project
+├── React-test/ # Practice/test React app
 
-### **2. Employee Management App (EMP-MANAGEMENT-APP)**
-Full-featured CRUD application with:
+---
 
-#### **Frontend Features**
-- React Router v7
-- React Hook Form
-- Responsive design with Tailwind CSS
-- State management (Zustand + Context)
-- CRUD operations (Create, Read, Update, Delete)
+## 🚀 Projects Overview
 
-#### **Backend Integration**
-- RESTful API calls
-- Error handling
-- Loading states
+### 1. Adding Users App
+- Built using **React + Vite**
+- Features:
+  - Add users
+  - Display user list
+  - Basic state management
+- Tech Stack:
+  - React
+  - JavaScript
+  - Tailwind CSS (if used)
 
-## 🛠️ Tech Stack
+---
 
-**Frontend:**
-- React 19
-- React Router 7
-- Tailwind CSS v4
-- React Hook Form
-- Zustand
-- Vite
+### 2. Employee App (Emp-app)
+- Backend application using:
+  - Node.js
+  - Express.js
+- Features:
+  - API handling
+  - Employee data management
+- May include:
+  - MongoDB (if connected)
+  - REST API structure
 
-## 🚀 Running the Projects
+---
 
+### 3. React Assignment 1
+- Practice React project
+- Covers:
+  - Components
+  - Props
+  - State handling
+
+---
+
+### 4. React Test
+- Experimental / testing project
+- Used for:
+  - Trying out concepts
+  - Debugging and learning
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the repository
 ```bash
-# Employee Management App
-cd EMP-MANAGEMENT-APP/Frontend
+git clone <your-repo-link>
+cd Week-6-Assignments
+
+2. Run React Projects
+
+Navigate to any React folder:
+
+cd addingusers
 npm install
 npm run dev
 
-# Backend (separate terminal)
-cd Backend
+Repeat for:
+
+React-assignment1
+React-test
+3. Run Backend (Emp-app)
+cd Emp-app
+npm install
 npm start
