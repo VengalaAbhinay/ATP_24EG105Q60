@@ -1,9 +1,9 @@
 # Week 4 - HTML & CSS Fundamentals
 
-## 📋 Overview
+##  Overview
 Static web page development assignments focusing on semantic HTML and basic CSS styling.
 
-## 🗂️ Assignments
+##  Assignments
 
 ### **Assignment 1: Basic Web Pages**
 
@@ -26,16 +26,16 @@ Static web page development assignments focusing on semantic HTML and basic CSS 
   - External links
   - Basic styling with CSS
 
-## 🎨 Features
+##  Features
 - Semantic HTML5 tags (`<header>`, `<section>`, `<article>`, etc.)
 - Basic CSS styling
 - Lists and navigation elements
 - Simple responsive-friendly structure
 
-## 🚀 How to Run
+##  How to Run
 Just open any `.html` file in your browser.
 
-## ✨ Key Learnings
+##  Key Learnings
 - Semantic HTML structure
 - Basic CSS selectors and styling
 - Content organization

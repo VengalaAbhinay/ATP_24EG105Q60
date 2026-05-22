@@ -1,16 +1,16 @@
 # Week 3 - Backend Development with Node.js & MongoDB
 
-## 📋 Overview
+##  Overview
 Full-stack backend API development for a **Product Management System** using Express.js and MongoDB.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 - **Node.js** + **Express.js**
 - **MongoDB** + **Mongoose**
 - **JWT Authentication**
 - **bcryptjs** for security
 - **Cookie-parser** + **dotenv**
 
-## 📁 Project Structure
+##  Project Structure
 Week-3-Assignments/
 ├── server.js                 # Main server
 ├── API/
@@ -22,7 +22,7 @@ Week-3-Assignments/
 ├── .env                      # Environment variables
 └── req.http                  # API testing (REST Client)
 
-## ✨ Features Implemented
+##  Features Implemented
 
 ### Authentication & Authorization
 - Login with JWT token
@@ -40,7 +40,7 @@ Week-3-Assignments/
 - Price range constraints
 - Required fields
 
-## 🚀 Setup & Run
+##  Setup & Run
 
 ```bash
 # Install dependencies

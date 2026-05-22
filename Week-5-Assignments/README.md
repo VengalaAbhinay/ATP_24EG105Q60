@@ -1,9 +1,9 @@
 # Week 5 - Frontend Development (HTML, CSS & Tailwind)
 
-## 📋 Overview
+##  Overview
 Collection of responsive web design assignments focusing on modern CSS and Tailwind CSS.
 
-## 🗂️ Assignments
+##  Assignments
 
 ### **Assignment 3: HTML Tables**
 - `table1.html` - Basic product comparison table
@@ -20,14 +20,14 @@ Collection of responsive web design assignments focusing on modern CSS and Tailw
 - Multiple demo pages (`1.html`, `2.html`, `3.html`)
 - Custom configuration and utility classes
 
-## 🎨 Design Highlights
+##  Design Highlights
 - Responsive layouts (mobile-first)
 - Modern card designs
 - Hover animations
 - Clean typography
 - Professional color schemes
 
-## 🚀 Running the Projects
+##  Running the Projects
 
 ```bash
 # For Tailwind project

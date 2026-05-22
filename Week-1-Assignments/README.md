@@ -1,9 +1,9 @@
 # Week 1 - JavaScript Fundamentals
 
-## 📋 Overview
+##  Overview
 This folder contains foundational JavaScript exercises covering variables, conditionals, functions, and array methods.
 
-## 🗂️ Exercises
+##  Exercises
 
 ### **Day 1: Core JavaScript**
 
@@ -24,7 +24,7 @@ This folder contains foundational JavaScript exercises covering variables, condi
   - Remove employee by name
   - Update nested array (marks)
 
-## 🚀 How to Run
+## How to Run
 
 ```bash
 node Week-1-Day-1/bignumamongtwo.js

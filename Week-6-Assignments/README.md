@@ -4,7 +4,7 @@ This repository contains multiple projects and practice assignments completed du
 
 ---
 
-## 📁 Folder Structure
+##  Folder Structure
 Week-6-Assignments/
 │
 ├── addingusers/ # React app for adding and managing users
@@ -14,7 +14,7 @@ Week-6-Assignments/
 
 ---
 
-## 🚀 Projects Overview
+##  Projects Overview
 
 ### 1. Adding Users App
 - Built using **React + Vite**
@@ -59,7 +59,7 @@ Week-6-Assignments/
 
 ---
 
-## ⚙️ Installation & Setup
+##  Installation & Setup
 
 ### 1. Clone the repository
 ```bash
@@ -82,3 +82,5 @@ React-test
 cd Emp-app
 npm install
 npm start
+
+deployment link:https://mernapp-frontend-tau.vercel.app

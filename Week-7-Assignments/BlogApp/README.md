@@ -3,10 +3,10 @@
 ```markdown
 # Week 7 - Full Stack Blog Application (BlogSpace)
 
-## 📋 Overview
+##  Overview
 A complete **Role-Based Full Stack Blog Platform** built with React, Node.js, Express, and MongoDB.
 
-## ✨ Features
+##  Features
 
 ### **Authentication & Authorization**
 - User Registration with **Cloudinary** profile photo upload
@@ -30,7 +30,7 @@ A complete **Role-Based Full Stack Blog Platform** built with React, Node.js, Ex
 - Moderate all articles (block/unblock)
 - View system-wide content
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 **Frontend:**
 - React 19 + Vite
@@ -47,7 +47,7 @@ A complete **Role-Based Full Stack Blog Platform** built with React, Node.js, Ex
 - bcryptjs
 - Multer
 
-## 📁 Project Structure
+##  Project Structure
 BlogApp/
 ├── backend/                  # Node.js + Express API
 │   ├── APIs/                 # Role-wise routers
@@ -63,7 +63,7 @@ BlogApp/
 │   └── App.jsx
 
 
-## 🚀 Setup Instructions
+##  Setup Instructions
 
 ### Backend
 ```bash

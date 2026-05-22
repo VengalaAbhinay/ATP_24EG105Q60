@@ -1,9 +1,9 @@
 # Week 2 - JavaScript & Node.js Assignments
 
-## 📋 Overview
+##  Overview
 This repository contains JavaScript fundamentals, modern ES6+ features, and Node.js module system implementations covered during **Week 2**.
 
-## 🗂️ Folder Structure
+## Folder Structure
 
 ### **Array Operations**
 - **Simple Operations** (`onlinecourseprocessor.js`, `studentmarkslist.js`, `tempanalyzer.js`)
@@ -26,7 +26,7 @@ This repository contains JavaScript fundamentals, modern ES6+ features, and Node
 - **Shallow vs Deep Copy**
 - **Timer Functions** - Exam portal simulator, OTP countdown
 
-## 🚀 How to Run
+##  How to Run
 
 ```bash
 # Navigate to any file and run
